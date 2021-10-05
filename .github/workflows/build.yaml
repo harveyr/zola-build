@@ -8,5 +8,6 @@ jobs:
       run:
         working-directory: site
     steps:
+      - run: cat /etc/*release
       - run: snap install --edge zola
       - run: zola build
