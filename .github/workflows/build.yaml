@@ -3,9 +3,10 @@ on: [push]
 jobs:
   build-site:
     runs-on: ubuntu-latest
-    container: balthek/zola:0.14.0
+    # container: balthek/zola:0.14.0
     defaults:
       run:
         working-directory: site
     steps:
+      - run: snap install --edge zola
       - run: zola build
