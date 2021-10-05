@@ -2,7 +2,8 @@ name: Build Site
 on: [push]
 jobs:
   build-site:
-    runs-on: balthek/zola:0.14.0
+    # runs-on: balthek/zola:0.14.0
+    container: balthek/zola:0.14.0
     defaults:
       run:
         working-directory: site
