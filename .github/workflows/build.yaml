@@ -1,0 +1,8 @@
+name: Build Site
+on: [push]
+jobs:
+  build-site:
+    runs-on: balthek/zola:0.14.0
+    working-directory: site
+    steps:
+      - run: zola build
